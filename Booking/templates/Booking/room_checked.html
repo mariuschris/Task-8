@@ -1,0 +1,20 @@
+{% extends 'home/index.html' %}
+
+{% block  body%}
+  <div class = "container">
+
+    {% if room_check == 0 %}
+    <p><b> This room is not occupied </b></p>
+    <a href = "{% url 'Booking:check-room' %}"> click here to check available room</a>
+    {% else %}
+    <p><b> Full Name: </b> {{ room_check.full_name }} </p>
+    <p><b> Email: </b> {{ room_check.email }} </p>
+    <p><b> Occupation: </b> {{ room_check.occupation }} </p>
+    <p><b> Room Number: </b> {{ room_check.room_number }} </p>
+    <p><b> Amount_Paid: </b> {{ room_check.amount_paid }} </p>
+    <p><b> Number of Night: </b> {{ room_check.number_of_night }} </p>
+    <p><b> Start Date: </b> {{ room_check.start_date }} </p>
+    <p><b> End Date: </b> {{ room_check.end_date }} </p>
+  </div>
+    {% endif %}
+{% endblock body %}

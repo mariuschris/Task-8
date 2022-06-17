@@ -1,0 +1,9 @@
+{% extends 'home/index.html' %}
+
+{% load crispy_forms_tags %}
+{% block  body%}
+
+<p> Registration successful </p>
+<a href = "{% url 'account:login' %}"> click here to login</a>
+        
+{% endblock body %}

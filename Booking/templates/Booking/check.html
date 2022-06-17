@@ -1,0 +1,26 @@
+{% extends 'home/index.html' %}
+
+{% block  body%}
+
+<h4> Check for available room</h4>
+
+<form method="post">
+        {% csrf_token %}
+        <div class="form-column">
+
+            <div class="col-md-6 mb-1">
+                <label for="room">Room number</label>
+                <input type="number" class="form-control" id="room" name = "room_number" required>
+            </div>
+
+
+        </div>
+        
+        
+        <button type="submit" class="btn btn-primary submit mb-">Check</button>
+            
+</form>
+        
+{% endblock body %}
+
+

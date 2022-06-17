@@ -1,0 +1,61 @@
+{% extends 'home/index.html' %}
+
+{% block  body%}
+
+<h4> Book a room </h4>
+
+<form method="post">
+        {% csrf_token %}
+        <div class="form-column">
+
+            <div class="col-md-6 mb-1">
+                    <label for="name">Full name</label>
+                <input type="text" class="form-control" id="name" name = "full_name" required>
+            </div>
+
+            <div class="col-md-6 mb-1">
+                <label for="email">Email</label>
+                 <input type="email" class="form-control" id="email" name = "email" required>
+             </div>
+
+            <div class="col-md-6 mb-1">
+                 <label for="occupation">Occupation</label>
+                <input type="text" class="form-control" id="occupation" name = "occupation" required>
+            </div>
+
+            <div class="col-md-6 mb-1">
+                <label for="room">Room number</label>
+                <input type="number" class="form-control" id="room" name = "room_number" required>
+            </div>
+
+            <div class="col-md-6 mb-1">
+                <label for="amount">Amount paid</label>
+                <input type="number" class="form-control" id="amount" name = "amount_paid" required>
+            </div>
+
+            <div class="col-md-6 mb-1">
+                <label for="night">Number of nights</label>
+                <input type="number" class="form-control" id="night" name = "number_of_night" required>
+            </div>
+
+            <div class="col-md-3 mb-1">
+                <label for="start">Start date</label>
+                 <input type="date" class="form-control" id="start" name = "start_date" required>
+            </div>
+
+            <div class="col-md-3 mb-1">
+                <label for="end">End Date</label>
+                <input type="date" class="form-control" id="end" name = "end_date" required>
+            </div>
+
+
+        </div>
+        
+        
+        <button type="submit" class="btn btn-primary submit mb-">Book</button>
+            
+</form>
+        
+{% endblock body %}
+
+

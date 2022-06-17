@@ -1,0 +1,10 @@
+{% extends 'home/index.html' %}
+
+{% block  body%}
+<center>
+    <p> Room booked successfully </p>
+    <a href = "{% url 'Booking:check-room' %}"> click here to check available room</a>
+</center>
+{% endblock body %}
+
+
